@@ -4,5 +4,5 @@
 #include<cuda_runtime.h>
 #include<cstdlib>
 
-void run_naiveg_gemm(const float* d_a ,const float* d_b ,float* d_c ,int N);
+void run_naiveg_gemm(const float* d_a ,const float* d_b ,float* d_c ,const int N);
 

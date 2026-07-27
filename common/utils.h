@@ -6,7 +6,7 @@
 #include <algorithm>
 
 //inlinne关键字：utils.h会被多个.cpp文件引用，加上这个不会报错
-//矩阵赋值
+//矩阵初始化赋值
 inline void init_matrices(std::vector<float>& a, std::vector<float>& b, int n, float av = 1.0f, float bv = 2.0f) {     
     for (int i = 0; i < n * n; i++) {
         a[i] = av;

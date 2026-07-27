@@ -8,42 +8,42 @@
   <line x1="80" y1="450" x2="750" y2="450" stroke="black" stroke-width="2"/>
   <line x1="80" y1="50" x2="80" y2="450" stroke="black" stroke-width="2"/>
   
-  <!-- Y轴刻度和网格线 (0-1000) -->
+  <!-- Y轴刻度和网格线 (0-2500) -->
   <text x="65" y="455" text-anchor="middle" font-family="Arial" font-size="12">0</text>
   <line x1="80" y1="450" x2="750" y2="450" stroke="#ddd" stroke-width="1"/>
-  <text x="65" y="375" text-anchor="middle" font-family="Arial" font-size="12">200</text>
+  <text x="65" y="375" text-anchor="middle" font-family="Arial" font-size="12">500</text>
   <line x1="80" y1="370" x2="750" y2="370" stroke="#ddd" stroke-width="1"/>
-  <text x="65" y="295" text-anchor="middle" font-family="Arial" font-size="12">400</text>
+  <text x="65" y="295" text-anchor="middle" font-family="Arial" font-size="12">1000</text>
   <line x1="80" y1="290" x2="750" y2="290" stroke="#ddd" stroke-width="1"/>
-  <text x="65" y="215" text-anchor="middle" font-family="Arial" font-size="12">600</text>
+  <text x="65" y="215" text-anchor="middle" font-family="Arial" font-size="12">1500</text>
   <line x1="80" y1="210" x2="750" y2="210" stroke="#ddd" stroke-width="1"/>
-  <text x="65" y="135" text-anchor="middle" font-family="Arial" font-size="12">800</text>
+  <text x="65" y="135" text-anchor="middle" font-family="Arial" font-size="12">2000</text>
   <line x1="80" y1="130" x2="750" y2="130" stroke="#ddd" stroke-width="1"/>
-  <text x="65" y="55" text-anchor="middle" font-family="Arial" font-size="12">1000</text>
+  <text x="65" y="55" text-anchor="middle" font-family="Arial" font-size="12">2500</text>
   <line x1="80" y1="50" x2="750" y2="50" stroke="#ddd" stroke-width="1"/>
   
   <!-- 折线 -->
-  <polyline points="150,448.76 288,437.03 425,426.13 563,410.38 700,141.39" fill="none" stroke="#3498db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="150,449.50 288,444.81 425,440.45 563,434.15 700,121.37" fill="none" stroke="#3498db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   
   <!-- 数据点和数值 -->
-  <circle cx="150" cy="448.76" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
+  <circle cx="150" cy="449.50" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
   <text x="150" y="436" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">3.10</text>
   <text x="150" y="475" text-anchor="middle" font-family="Arial" font-size="11">Naive(ijk)</text>
   
-  <circle cx="288" cy="437.03" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
-  <text x="288" y="424" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">32.42</text>
+  <circle cx="288" cy="444.81" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
+  <text x="288" y="431" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">32.42</text>
   <text x="288" y="475" text-anchor="middle" font-family="Arial" font-size="11">Naive(ikj)</text>
   
-  <circle cx="425" cy="426.13" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
-  <text x="425" y="413" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">59.67</text>
+  <circle cx="425" cy="440.45" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
+  <text x="425" y="427" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">59.67</text>
   <text x="425" y="475" text-anchor="middle" font-family="Arial" font-size="11">OpenMP</text>
   
-  <circle cx="563" cy="410.38" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
-  <text x="563" y="398" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">99.04</text>
+  <circle cx="563" cy="434.15" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
+  <text x="563" y="421" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">99.04</text>
   <text x="563" y="475" text-anchor="middle" font-family="Arial" font-size="11">Tiling</text>
   
-  <circle cx="700" cy="141.39" r="6" fill="white" stroke="#e74c3c" stroke-width="3"/>
-  <text x="700" y="129" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#e74c3c">771.52</text>
+  <circle cx="700" cy="121.37" r="6" fill="white" stroke="#e74c3c" stroke-width="3"/>
+  <text x="700" y="109" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#e74c3c">2053.97</text>
   <text x="700" y="475" text-anchor="middle" font-family="Arial" font-size="11" fill="#e74c3c">Naive_GPU</text>
   
   <!-- Y轴标题 -->

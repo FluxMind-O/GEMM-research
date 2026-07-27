@@ -1,7 +1,7 @@
 #include"naive_g.cuh"
 
 
-__global__ void add(const float* a ,const float* b ,float* c,int N){
+__global__ void add(const float* a ,const float* b ,float* c,const int N){
 
     int row = blockIdx.y * blockDim.y + threadIdx.y;  //行方向
     int col = blockIdx.x * blockDim.x + threadIdx.x;
@@ -18,7 +18,7 @@ __global__ void add(const float* a ,const float* b ,float* c,int N){
 }
 
 
-void run_naiveg_gemm(const float* d_a ,const float* d_b ,float* d_c ,int N){
+void run_naiveg_gemm(const float* d_a ,const float* d_b ,float* d_c ,const int N){
 
     dim3 threads(16,16);
     dim3 blocks( (N+threads.x-1)/threads.x ,(N+threads.y-1)/threads.y );
