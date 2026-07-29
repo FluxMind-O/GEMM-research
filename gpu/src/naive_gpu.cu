@@ -1,4 +1,4 @@
-#include"gpu_naive.cuh"
+#include"naive_gpu.cuh"
 
 
 __global__ void add(const float* a ,const float* b ,float* c,const int N){

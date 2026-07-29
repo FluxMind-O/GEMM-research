@@ -26,9 +26,9 @@ __global__ void shared_gemm(const float* a, const float* b, float* c, const int 
 
         __syncthreads();
         
-        //阶段 2：从 shared memory 读取并累加 
+        //阶段 2：从 shared memory 读取并累加
         #pragma unroll   //循环展开优化
-        for(int j=0; j<numTiles; j++)
+        for(int j=0; j<TILE_SIZE; j++)
          sum += as[threadIdx.y][j] * bs[j][threadIdx.x];
 
          __syncthreads();

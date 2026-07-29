@@ -2,7 +2,7 @@
 #include<vector>
 
 #include "common/utils.h"
-#include"gpu_naive.cuh"
+#include"naive_gpu.cuh"
 #include"shared.cuh"
 
 #define CUDA_CHECK(call) do { \

@@ -16,7 +16,8 @@ GEMM-research/
 │   └── main.cpp      # CPU 统一测试入口
 ├── gpu/              # GPU 版本【进行中】
 │   ├── src/
-│   │   └── naive_g.cu
+│   │   ├── naive_gpu.cu
+│   │   └── shared.cu
 │   ├── include/      # GPU 头文件
 │   └── main.cu       # GPU 测试与验证入口
 ├── common/
@@ -47,7 +48,8 @@ GEMM-research/
 | OpenMP     | 0.035987                         | 59.67  |
 | Tiling     | 0.021683                         | 99.04  |
 | <br />     |                  **GPU部分**： | <br /> |
-| Naive\_GPU | 0.00104553                       | 2053.97 |
+| Naive\_GPU | 0.00104681                       | 2051.45 |
+| Shared\_Memory\_Tiling | 0.000810017              | 2651.16 |
 
 ## 说明
 
@@ -61,6 +63,7 @@ GEMM-research/
 **GPU部分：**
 
 - **Naive\_GPU**：最基础的 CUDA 实现，使用 16×16 线程块的二维网格映射，每个线程计算输出矩阵的一个元素，性能约为最快 CPU 版本的 20.7 倍。
+- **Shared\_Memory\_Tiling**：在 Naive 基础上使用共享内存分块（Tiling），将全局内存访问缓存在 shared memory 中，减少重复访问，性能约为 Naive\_GPU 的 1.3 倍。
 
 ## 编译与运行
 
@@ -81,7 +84,7 @@ g++ -fopenmp -O3 -march=native -I. cpu/main.cpp cpu/src/naive_ijk.cpp cpu/src/na
 ### GPU 入口（CUDA）
 
 ```bash
-nvcc -I. -Icommon -Igpu/include gpu/main.cu gpu/src/naive_g.cu -o gpu_gemm
+nvcc -I. -Icommon -Igpu/include gpu/main.cu gpu/src/naive_gpu.cu gpu/src/shared.cu -o gpu_gemm
 ./gpu_gemm
 ```
 
