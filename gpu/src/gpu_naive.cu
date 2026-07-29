@@ -1,4 +1,4 @@
-#include"naive_g.cuh"
+#include"gpu_naive.cuh"
 
 
 __global__ void add(const float* a ,const float* b ,float* c,const int N){
@@ -18,7 +18,7 @@ __global__ void add(const float* a ,const float* b ,float* c,const int N){
 }
 
 
-void run_naiveg_gemm(const float* d_a ,const float* d_b ,float* d_c ,const int N){
+void run_naive_gemm(const float* d_a ,const float* d_b ,float* d_c ,const int N){
 
     dim3 threads(16,16);
     dim3 blocks( (N+threads.x-1)/threads.x ,(N+threads.y-1)/threads.y );
