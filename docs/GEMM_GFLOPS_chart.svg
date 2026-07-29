@@ -1,58 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540">
-  <rect width="100%" height="100%" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460">
+  <rect x="0" y="0" width="900" height="460" fill="#F5F3EE" rx="12" ry="12"/>
 
-  <!-- 标题 -->
-  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold">GEMM 各版本 GFLOPS 趋势 (n=1024)</text>
+  <!-- 白色卡片 -->
+  <rect x="30" y="20" width="840" height="420" fill="#FFFFFF" stroke="#ECE8E0" rx="8" ry="8"/>
+  <text x="450" y="50" text-anchor="middle" font-size="18" fill="#1F1E1D" font-weight="bold" font-family="Georgia, 'Times New Roman', 'Noto Serif SC', 'Songti SC', serif">GEMM 各版本 GFLOPS 趋势</text>
+  <text x="450" y="69" text-anchor="middle" font-size="11" fill="#8A857B" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">n = 1024 · fp32 · CPU vs GPU (RTX 3080 Ti)</text>
 
-  <!-- 坐标轴 -->
-  <line x1="90" y1="450" x2="830" y2="450" stroke="black" stroke-width="2"/>
-  <line x1="90" y1="50" x2="90" y2="450" stroke="black" stroke-width="2"/>
+  <!-- 分区标注 -->
+  <text x="323" y="92" text-anchor="middle" font-size="10" fill="#A39E92" font-weight="bold" letter-spacing="2" font-family="'Helvetica Neue', Arial, sans-serif">CPU</text>
+  <text x="749" y="92" text-anchor="middle" font-size="10" fill="#A39E92" font-weight="bold" letter-spacing="2" font-family="'Helvetica Neue', Arial, sans-serif">GPU</text>
+  <line x1="607" y1="100" x2="607" y2="400" stroke="#D8D2C6" stroke-width="1" stroke-dasharray="4,4"/>
 
-  <!-- Y轴刻度和网格线 (0-3000) -->
-  <text x="75" y="454" text-anchor="end" font-family="Arial" font-size="12">0</text>
-  <line x1="90" y1="450" x2="830" y2="450" stroke="#ddd" stroke-width="1"/>
-  <text x="75" y="387" text-anchor="end" font-family="Arial" font-size="12">500</text>
-  <line x1="90" y1="383" x2="830" y2="383" stroke="#ddd" stroke-width="1"/>
-  <text x="75" y="320" text-anchor="end" font-family="Arial" font-size="12">1000</text>
-  <line x1="90" y1="317" x2="830" y2="317" stroke="#ddd" stroke-width="1"/>
-  <text x="75" y="254" text-anchor="end" font-family="Arial" font-size="12">1500</text>
-  <line x1="90" y1="250" x2="830" y2="250" stroke="#ddd" stroke-width="1"/>
-  <text x="75" y="187" text-anchor="end" font-family="Arial" font-size="12">2000</text>
-  <line x1="90" y1="183" x2="830" y2="183" stroke="#ddd" stroke-width="1"/>
-  <text x="75" y="120" text-anchor="end" font-family="Arial" font-size="12">2500</text>
-  <line x1="90" y1="117" x2="830" y2="117" stroke="#ddd" stroke-width="1"/>
-  <text x="75" y="54" text-anchor="end" font-family="Arial" font-size="12">3000</text>
-  <line x1="90" y1="50" x2="830" y2="50" stroke="#ddd" stroke-width="1"/>
+  <!-- 网格线与 Y 轴刻度（0.1 px/GFLOPS，基线 y=400） -->
+  <line x1="90" y1="350" x2="850" y2="350" stroke="#EDE9E1" stroke-width="1"/>
+  <line x1="90" y1="300" x2="850" y2="300" stroke="#EDE9E1" stroke-width="1"/>
+  <line x1="90" y1="250" x2="850" y2="250" stroke="#EDE9E1" stroke-width="1"/>
+  <line x1="90" y1="200" x2="850" y2="200" stroke="#EDE9E1" stroke-width="1"/>
+  <line x1="90" y1="150" x2="850" y2="150" stroke="#EDE9E1" stroke-width="1"/>
+  <line x1="90" y1="100" x2="850" y2="100" stroke="#EDE9E1" stroke-width="1"/>
+  <text x="84" y="403" text-anchor="end" font-size="10" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">0</text>
+  <text x="84" y="353" text-anchor="end" font-size="10" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">500</text>
+  <text x="84" y="303" text-anchor="end" font-size="10" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">1000</text>
+  <text x="84" y="253" text-anchor="end" font-size="10" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">1500</text>
+  <text x="84" y="203" text-anchor="end" font-size="10" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">2000</text>
+  <text x="84" y="153" text-anchor="end" font-size="10" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">2500</text>
+  <text x="84" y="103" text-anchor="end" font-size="10" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">3000</text>
+  <line x1="90" y1="400" x2="850" y2="400" stroke="#D8D2C6" stroke-width="1.5"/>
 
-  <!-- 折线 -->
-  <polyline points="90,449.59 234,445.68 378,442.04 522,436.80 666,176.47 810,96.51" fill="none" stroke="#3498db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- CPU 段折线（鼠尾草绿） -->
+  <polyline points="110,399.7 252,396.8 394,394.0 536,390.1" fill="none" stroke="#7A9B8E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- CPU → GPU 过渡虚线 -->
+  <line x1="536" y1="390.1" x2="678" y2="194.9" stroke="#C4B7A6" stroke-width="2" stroke-dasharray="5,4"/>
+  <!-- GPU 段折线（陶土橙） -->
+  <polyline points="678,194.9 820,134.9" fill="none" stroke="#D97757" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- CPU 数据点和数值 -->
-  <circle cx="90" cy="449.59" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
-  <text x="90" y="437" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">3.10</text>
-  <text x="90" y="475" text-anchor="middle" font-family="Arial" font-size="11">Naive(ijk)</text>
+  <!-- 数据点与数值 -->
+  <circle cx="110" cy="399.7" r="5" fill="#7A9B8E" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="110" y="386" text-anchor="middle" font-size="11" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">3.10</text>
+  <text x="110" y="422" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, sans-serif">Naive(ijk)</text>
 
-  <circle cx="234" cy="445.68" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
-  <text x="234" y="433" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">32.42</text>
-  <text x="234" y="475" text-anchor="middle" font-family="Arial" font-size="11">Naive(ikj)</text>
+  <circle cx="252" cy="396.8" r="5" fill="#7A9B8E" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="252" y="383" text-anchor="middle" font-size="11" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">32.42</text>
+  <text x="252" y="422" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, sans-serif">Naive(ikj)</text>
 
-  <circle cx="378" cy="442.04" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
-  <text x="378" y="430" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">59.67</text>
-  <text x="378" y="475" text-anchor="middle" font-family="Arial" font-size="11">OpenMP</text>
+  <circle cx="394" cy="394.0" r="5" fill="#7A9B8E" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="394" y="380" text-anchor="middle" font-size="11" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">59.67</text>
+  <text x="394" y="422" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, sans-serif">OpenMP</text>
 
-  <circle cx="522" cy="436.80" r="6" fill="white" stroke="#3498db" stroke-width="3"/>
-  <text x="522" y="424" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold">99.04</text>
-  <text x="522" y="475" text-anchor="middle" font-family="Arial" font-size="11">Tiling</text>
+  <circle cx="536" cy="390.1" r="5" fill="#7A9B8E" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="536" y="376" text-anchor="middle" font-size="11" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">99.04</text>
+  <text x="536" y="422" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, sans-serif">Tiling</text>
 
-  <!-- GPU 数据点和数值 -->
-  <circle cx="666" cy="176.47" r="6" fill="white" stroke="#e74c3c" stroke-width="3"/>
-  <text x="666" y="164" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#e74c3c">2051.45</text>
-  <text x="666" y="475" text-anchor="middle" font-family="Arial" font-size="11" fill="#e74c3c">Naive_GPU</text>
+  <circle cx="678" cy="194.9" r="5" fill="#D97757" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="678" y="181" text-anchor="middle" font-size="11" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">2051.45</text>
+  <text x="678" y="422" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, sans-serif">Naive GPU</text>
 
-  <circle cx="810" cy="96.51" r="6" fill="white" stroke="#e74c3c" stroke-width="3"/>
-  <text x="810" y="84" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#e74c3c">2651.16</text>
-  <text x="810" y="475" text-anchor="middle" font-family="Arial" font-size="11" fill="#e74c3c">Shared_Tiling</text>
-
-  <!-- Y轴标题 -->
-  <text x="25" y="250" text-anchor="middle" font-family="Arial" font-size="14" transform="rotate(-90, 25, 250)">GFLOPS</text>
+  <circle cx="820" cy="134.9" r="5" fill="#D97757" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="820" y="121" text-anchor="middle" font-size="11" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">2651.16</text>
+  <text x="820" y="422" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, sans-serif">Shared Tiling</text>
 </svg>

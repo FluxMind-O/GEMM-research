@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380">
+  <rect x="0" y="0" width="640" height="380" fill="#F5F3EE" rx="12" ry="12"/>
+
+  <!-- 白色卡片 -->
+  <rect x="30" y="24" width="580" height="310" fill="#FFFFFF" stroke="#ECE8E0" rx="8" ry="8"/>
+  <text x="320" y="62" text-anchor="middle" font-size="19" fill="#1F1E1D" font-weight="bold" font-family="Georgia, 'Times New Roman', 'Noto Serif SC', 'Songti SC', serif">耗时占比总览</text>
+  <text x="320" y="82" text-anchor="middle" font-size="11" fill="#8A857B" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Kernel 计算 vs Memcpy 传输 · 共计 39.73 ms</text>
+
+  <!-- 环形图：整圆（陶土橙）+ 7% 扇形（米驼）+ 白色内圆 -->
+  <circle cx="240" cy="195" r="88" fill="#D97757"/>
+  <path d="M 240,195 L 240,107 A 88,88 0 0,0 202.5,115.4 Z" fill="#C4B7A6" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="240" cy="195" r="50" fill="#FFFFFF"/>
+  <text x="240" y="194" text-anchor="middle" font-size="26" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">93.0%</text>
+  <text x="240" y="214" text-anchor="middle" font-size="11" fill="#8A857B" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Kernel 计算</text>
+
+  <!-- 图例 -->
+  <rect x="395" y="142" width="14" height="14" fill="#D97757" rx="3"/>
+  <text x="419" y="154" text-anchor="start" font-size="12" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Kernel（计算）</text>
+  <text x="419" y="172" text-anchor="start" font-size="10" fill="#8A857B" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">36.94 ms · 93.0%</text>
+  <rect x="395" y="204" width="14" height="14" fill="#C4B7A6" rx="3"/>
+  <text x="419" y="216" text-anchor="start" font-size="12" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Memcpy（传输）</text>
+  <text x="419" y="234" text-anchor="start" font-size="10" fill="#8A857B" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">2.79 ms · 7.0%</text>
+
+  <text x="320" y="358" text-anchor="middle" font-size="11" fill="#8A857B" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">计算占绝对主导（93%），优化应聚焦 Kernel 而非数据传输</text>
+</svg>

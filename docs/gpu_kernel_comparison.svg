@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 370" width="720" height="370">
+  <rect x="0" y="0" width="720" height="370" fill="#F5F3EE" rx="12" ry="12"/>
+
+  <!-- 白色卡片 -->
+  <rect x="30" y="20" width="660" height="292" fill="#FFFFFF" stroke="#ECE8E0" rx="8" ry="8"/>
+  <text x="360" y="50" text-anchor="middle" font-size="18" fill="#1F1E1D" font-weight="bold" font-family="Georgia, 'Times New Roman', 'Noto Serif SC', 'Songti SC', serif">Naive 对比 Shared Memory Tiling</text>
+  <text x="360" y="69" text-anchor="middle" font-size="11" fill="#8A857B" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">1024×1024 fp32 GEMM · RTX 3080 Ti · 20 次平均</text>
+
+  <text x="215" y="94" text-anchor="middle" font-size="11" fill="#8A857B" font-weight="bold" letter-spacing="1" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">平均耗时 (μs)</text>
+  <text x="545" y="94" text-anchor="middle" font-size="11" fill="#8A857B" font-weight="bold" letter-spacing="1" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">有效算力 (GFLOPS)</text>
+
+  <!-- 左面板：耗时 -->
+  <line x1="90" y1="216.7" x2="340" y2="216.7" stroke="#EDE9E1" stroke-width="1"/>
+  <line x1="90" y1="163.3" x2="340" y2="163.3" stroke="#EDE9E1" stroke-width="1"/>
+  <line x1="90" y1="110" x2="340" y2="110" stroke="#EDE9E1" stroke-width="1"/>
+  <text x="84" y="220" text-anchor="end" font-size="9" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">400</text>
+  <text x="84" y="167" text-anchor="end" font-size="9" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">800</text>
+  <text x="84" y="114" text-anchor="end" font-size="9" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">1200</text>
+  <line x1="90" y1="270" x2="340" y2="270" stroke="#D8D2C6" stroke-width="1.5"/>
+
+  <rect x="120" y="131.0" width="70" height="139.0" fill="#C4B7A6" rx="3"/>
+  <text x="155" y="122" text-anchor="middle" font-size="12" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">1042.6</text>
+  <rect x="235" y="162.8" width="70" height="107.2" fill="#D97757" rx="3"/>
+  <text x="270" y="154" text-anchor="middle" font-size="12" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">804.3</text>
+  <line x1="192" y1="131.0" x2="233" y2="162.8" stroke="#648A77" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="212" y="116" text-anchor="middle" font-size="12" fill="#648A77" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">-22.9%</text>
+  <text x="155" y="290" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Naive GPU</text>
+  <text x="270" y="290" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Shared Tiling</text>
+
+  <!-- 右面板：GFLOPS -->
+  <line x1="420" y1="216.7" x2="670" y2="216.7" stroke="#EDE9E1" stroke-width="1"/>
+  <line x1="420" y1="163.3" x2="670" y2="163.3" stroke="#EDE9E1" stroke-width="1"/>
+  <line x1="420" y1="110" x2="670" y2="110" stroke="#EDE9E1" stroke-width="1"/>
+  <text x="414" y="220" text-anchor="end" font-size="9" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">1000</text>
+  <text x="414" y="167" text-anchor="end" font-size="9" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">2000</text>
+  <text x="414" y="114" text-anchor="end" font-size="9" fill="#A39E92" font-family="'Helvetica Neue', Arial, sans-serif">3000</text>
+  <line x1="420" y1="270" x2="670" y2="270" stroke="#D8D2C6" stroke-width="1.5"/>
+
+  <rect x="450" y="160.6" width="70" height="109.4" fill="#C4B7A6" rx="3"/>
+  <text x="485" y="152" text-anchor="middle" font-size="12" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">2051</text>
+  <rect x="565" y="128.6" width="70" height="141.4" fill="#D97757" rx="3"/>
+  <text x="600" y="120" text-anchor="middle" font-size="12" fill="#1F1E1D" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">2651</text>
+  <line x1="522" y1="160.6" x2="563" y2="128.6" stroke="#648A77" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="542" y="112" text-anchor="middle" font-size="12" fill="#648A77" font-weight="bold" font-family="'Helvetica Neue', Arial, sans-serif">+29.3%</text>
+  <text x="485" y="290" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Naive GPU</text>
+  <text x="600" y="290" text-anchor="middle" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Shared Tiling</text>
+
+  <!-- 图例 -->
+  <rect x="255" y="332" width="13" height="13" fill="#C4B7A6" rx="3"/>
+  <text x="276" y="343" text-anchor="start" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Naive GPU</text>
+  <rect x="375" y="332" width="13" height="13" fill="#D97757" rx="3"/>
+  <text x="396" y="343" text-anchor="start" font-size="11" fill="#1F1E1D" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">Shared Memory Tiling</text>
+</svg>

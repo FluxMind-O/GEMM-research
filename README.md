@@ -41,8 +41,8 @@ GEMM-research/
 ## nsys 性能分析
 
 - [GPU nsys 分析报告](docs/nsys_gpu_analysis.md)
-- ![GPU 耗时占比](docs/gpu_time_pie.svg)
-- ![GPU 详细耗时](docs/gpu_time_breakdown.svg)
+- ![GPU 耗时占比](docs/gpu_time_proportion.svg)
+- ![GPU Timeline](docs/nsys_timeline.svg)
 
 ## 对比数据
 
