@@ -14,7 +14,7 @@ GEMM-research/
 │   │   └── tiling.cpp
 │   ├── include/      # CPU 头文件
 │   └── main.cpp      # CPU 统一测试入口
-├── gpu/              # GPU 版本【进行中】
+├── gpu/              # GPU 版本【已完成】
 │   ├── src/
 │   │   ├── naive_gpu.cu
 │   │   └── shared.cu
