@@ -38,6 +38,12 @@ GEMM-research/
 
 > 提示：在浏览器中直接打开 `docs/GEMM_GFLOPS_chart.svg` 即可查看高清图表。
 
+## nsys 性能分析
+
+- [GPU nsys 分析报告](docs/nsys_gpu_analysis.md)
+- ![GPU 耗时占比](docs/gpu_time_pie.svg)
+- ![GPU 详细耗时](docs/gpu_time_breakdown.svg)
+
 ## 对比数据
 
 | 版本         | 时间 (S)                           | GFLOPS |
