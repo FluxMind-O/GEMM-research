@@ -38,11 +38,6 @@ GEMM-research/
 
 > 提示：在浏览器中直接打开 `docs/GEMM_GFLOPS_chart.svg` 即可查看高清图表。
 
-## nsys 性能分析
-
-- [GPU nsys 分析报告](docs/nsys_gpu_analysis.md)
-- ![GPU 耗时占比](docs/gpu_time_proportion.svg)
-- ![GPU Timeline](docs/nsys_timeline.svg)
 
 ## 对比数据
 
@@ -70,6 +65,14 @@ GEMM-research/
 
 - **Naive\_GPU**：最基础的 CUDA 实现，使用 16×16 线程块的二维网格映射，每个线程计算输出矩阵的一个元素，性能约为最快 CPU 版本的 20.7 倍。
 - **Shared\_Memory\_Tiling**：在 Naive 基础上使用共享内存分块（Tiling），将全局内存访问缓存在 shared memory 中，减少重复访问，性能约为 Naive\_GPU 的 1.3 倍。
+
+
+  ## nsys 性能分析
+
+- [GPU nsys 分析报告](docs/nsys_gpu_analysis.md)
+- ![GPU 耗时占比](docs/gpu_time_proportion.svg)
+- ![GPU Timeline](docs/nsys_timeline.svg)
+
 
 ## 编译与运行
 
