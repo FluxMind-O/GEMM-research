@@ -23,9 +23,7 @@ GEMM-research/
 ├── common/
 │   └── utils.h       # 公共工具：矩阵初始化、验证、计时、GFLOPS 计算
 ├── docs/
-│   ├── GEMM_GFLOPS_chart.svg   # 性能对比图表
-│   ├── cpu_gflops.xlsx         # Month 4 Excel 审计点 (TODO)
-│   └── nsys_timeline.png       # Week 13 nsys 截图 (TODO)
+│   └── nsys_gpu_analysis.md    # GPU nsys 分析报告
 ├── scripts/
 │   └── run_nsys.sh   # 自动化 nsys profile 脚本
 ├── .gitignore
