@@ -50,6 +50,7 @@ GEMM-research/
 | Naive\_GPU | 0.00104681                       | 2051.45 |
 | Shared\_Memory\_Tiling | 0.000810017              | 2651.16 |
 
+
 ## 说明
 
 **CPU部分：**
@@ -65,7 +66,7 @@ GEMM-research/
 - **Shared\_Memory\_Tiling**：在 Naive 基础上使用共享内存分块（Tiling），将全局内存访问缓存在 shared memory 中，减少重复访问，性能约为 Naive\_GPU 的 1.3 倍。
 
 
-  ## nsys 性能分析
+## nsys 性能分析
 
 - [GPU nsys 分析报告](docs/nsys_gpu_analysis.md)
 - ![GPU 耗时占比](docs/gpu_time_proportion.svg)
